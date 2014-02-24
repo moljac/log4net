@@ -1,0 +1,817 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+ Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements.  See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License.  You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied.  See the License for the
+ specific language governing permissions and limitations
+ under the License.
+
+-->
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{181FE707-E161-4722-9F38-6AAAB6FAA106}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>log4net</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>log4net</RootNamespace>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\build\bin\log4net\net\2.0\debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE;DEBUG;DOTNET;FRAMEWORK_3_5_OR_ABOVE;FRAMEWORK_4_0_OR_ABOVE</DefineConstants>
+    <DocumentationFile>log4net.xml</DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>SecurityRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\..\build\bin\log4net\net\2.0\release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE;STRONG;DOTNET;FRAMEWORK_3_5_OR_ABOVE;FRAMEWORK_4_0_OR_ABOVE</DefineConstants>
+    <DocumentationFile>log4net.xml</DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\log4net.vs2010.client\Appender\AdoNetAppender.cs">
+      <Link>Appender\AdoNetAppender.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Appender\AnsiColorTerminalAppender.cs">
+      <Link>Appender\AnsiColorTerminalAppender.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Appender\AppenderCollection.cs">
+      <Link>Appender\AppenderCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Appender\AppenderSkeleton.cs">
+      <Link>Appender\AppenderSkeleton.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Appender\BufferingAppenderSkeleton.cs">
+      <Link>Appender\BufferingAppenderSkeleton.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Appender\BufferingForwardingAppender.cs">
+      <Link>Appender\BufferingForwardingAppender.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Appender\ColoredConsoleAppender.cs">
+      <Link>Appender\ColoredConsoleAppender.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Appender\ConsoleAppender.cs">
+      <Link>Appender\ConsoleAppender.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Appender\DebugAppender.cs">
+      <Link>Appender\DebugAppender.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Appender\EventLogAppender.cs">
+      <Link>Appender\EventLogAppender.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Appender\FileAppender.cs">
+      <Link>Appender\FileAppender.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Appender\ForwardingAppender.cs">
+      <Link>Appender\ForwardingAppender.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Appender\IAppender.cs">
+      <Link>Appender\IAppender.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Appender\IBulkAppender.cs">
+      <Link>Appender\IBulkAppender.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Appender\LocalSyslogAppender.cs">
+      <Link>Appender\LocalSyslogAppender.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Appender\ManagedColoredConsoleAppender.cs">
+      <Link>Appender\ManagedColoredConsoleAppender.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Appender\MemoryAppender.cs">
+      <Link>Appender\MemoryAppender.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Appender\NetSendAppender.cs">
+      <Link>Appender\NetSendAppender.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Appender\OutputDebugStringAppender.cs">
+      <Link>Appender\OutputDebugStringAppender.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Appender\RemoteSyslogAppender.cs">
+      <Link>Appender\RemoteSyslogAppender.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Appender\RemotingAppender.cs">
+      <Link>Appender\RemotingAppender.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Appender\RollingFileAppender.cs">
+      <Link>Appender\RollingFileAppender.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Appender\SmtpAppender.cs">
+      <Link>Appender\SmtpAppender.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Appender\SmtpPickupDirAppender.cs">
+      <Link>Appender\SmtpPickupDirAppender.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Appender\TelnetAppender.cs">
+      <Link>Appender\TelnetAppender.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Appender\TextWriterAppender.cs">
+      <Link>Appender\TextWriterAppender.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Appender\TraceAppender.cs">
+      <Link>Appender\TraceAppender.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Appender\UdpAppender.cs">
+      <Link>Appender\UdpAppender.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\AssemblyInfo.cs">
+      <Link>AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\AssemblyVersionInfo.cs">
+      <Link>AssemblyVersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Core\CompactRepositorySelector.cs">
+      <Link>Core\CompactRepositorySelector.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Core\DefaultRepositorySelector.cs">
+      <Link>Core\DefaultRepositorySelector.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Core\ErrorCode.cs">
+      <Link>Core\ErrorCode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Core\ExceptionEvaluator.cs">
+      <Link>Core\ExceptionEvaluator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Core\IAppenderAttachable.cs">
+      <Link>Core\IAppenderAttachable.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Core\IErrorHandler.cs">
+      <Link>Core\IErrorHandler.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Core\IFixingRequired.cs">
+      <Link>Core\IFixingRequired.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Core\ILogger.cs">
+      <Link>Core\ILogger.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Core\ILoggerWrapper.cs">
+      <Link>Core\ILoggerWrapper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Core\IOptionHandler.cs">
+      <Link>Core\IOptionHandler.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Core\IRepositorySelector.cs">
+      <Link>Core\IRepositorySelector.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Core\ITriggeringEventEvaluator.cs">
+      <Link>Core\ITriggeringEventEvaluator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Core\Level.cs">
+      <Link>Core\Level.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Core\LevelCollection.cs">
+      <Link>Core\LevelCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Core\LevelEvaluator.cs">
+      <Link>Core\LevelEvaluator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Core\LevelMap.cs">
+      <Link>Core\LevelMap.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Core\LocationInfo.cs">
+      <Link>Core\LocationInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Core\LogException.cs">
+      <Link>Core\LogException.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Core\LoggerManager.cs">
+      <Link>Core\LoggerManager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Core\LoggerWrapperImpl.cs">
+      <Link>Core\LoggerWrapperImpl.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Core\LoggingEvent.cs">
+      <Link>Core\LoggingEvent.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Core\LogImpl.cs">
+      <Link>Core\LogImpl.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Core\MethodItem.cs">
+      <Link>Core\MethodItem.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Core\SecurityContext.cs">
+      <Link>Core\SecurityContext.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Core\SecurityContextProvider.cs">
+      <Link>Core\SecurityContextProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Core\StackFrameItem.cs">
+      <Link>Core\StackFrameItem.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Core\TimeEvaluator.cs">
+      <Link>Core\TimeEvaluator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Core\WrapperMap.cs">
+      <Link>Core\WrapperMap.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\DateFormatter\AbsoluteTimeDateFormatter.cs">
+      <Link>DateFormatter\AbsoluteTimeDateFormatter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\DateFormatter\DateTimeDateFormatter.cs">
+      <Link>DateFormatter\DateTimeDateFormatter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\DateFormatter\IDateFormatter.cs">
+      <Link>DateFormatter\IDateFormatter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\DateFormatter\Iso8601DateFormatter.cs">
+      <Link>DateFormatter\Iso8601DateFormatter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\DateFormatter\SimpleDateFormatter.cs">
+      <Link>DateFormatter\SimpleDateFormatter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Filter\DenyAllFilter.cs">
+      <Link>Filter\DenyAllFilter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Filter\FilterDecision.cs">
+      <Link>Filter\FilterDecision.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Filter\FilterSkeleton.cs">
+      <Link>Filter\FilterSkeleton.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Filter\IFilter.cs">
+      <Link>Filter\IFilter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Filter\LevelMatchFilter.cs">
+      <Link>Filter\LevelMatchFilter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Filter\LevelRangeFilter.cs">
+      <Link>Filter\LevelRangeFilter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Filter\LoggerMatchFilter.cs">
+      <Link>Filter\LoggerMatchFilter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Filter\MdcFilter.cs">
+      <Link>Filter\MdcFilter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Filter\NdcFilter.cs">
+      <Link>Filter\NdcFilter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Filter\PropertyFilter.cs">
+      <Link>Filter\PropertyFilter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Filter\StringMatchFilter.cs">
+      <Link>Filter\StringMatchFilter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\GlobalContext.cs">
+      <Link>GlobalContext.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\ILog.cs">
+      <Link>ILog.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Layout\DynamicPatternLayout.cs">
+      <Link>Layout\DynamicPatternLayout.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Layout\ExceptionLayout.cs">
+      <Link>Layout\ExceptionLayout.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Layout\ILayout.cs">
+      <Link>Layout\ILayout.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Layout\IRawLayout.cs">
+      <Link>Layout\IRawLayout.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Layout\Layout2RawLayoutAdapter.cs">
+      <Link>Layout\Layout2RawLayoutAdapter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Layout\LayoutSkeleton.cs">
+      <Link>Layout\LayoutSkeleton.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Layout\PatternLayout.cs">
+      <Link>Layout\PatternLayout.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Layout\Pattern\AppDomainPatternConverter.cs">
+      <Link>Layout\Pattern\AppDomainPatternConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Layout\Pattern\DatePatternConverter.cs">
+      <Link>Layout\Pattern\DatePatternConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Layout\Pattern\ExceptionPatternConverter.cs">
+      <Link>Layout\Pattern\ExceptionPatternConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Layout\Pattern\FileLocationPatternConverter.cs">
+      <Link>Layout\Pattern\FileLocationPatternConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Layout\Pattern\FullLocationPatternConverter.cs">
+      <Link>Layout\Pattern\FullLocationPatternConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Layout\Pattern\IdentityPatternConverter.cs">
+      <Link>Layout\Pattern\IdentityPatternConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Layout\Pattern\LevelPatternConverter.cs">
+      <Link>Layout\Pattern\LevelPatternConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Layout\Pattern\LineLocationPatternConverter.cs">
+      <Link>Layout\Pattern\LineLocationPatternConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Layout\Pattern\LoggerPatternConverter.cs">
+      <Link>Layout\Pattern\LoggerPatternConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Layout\Pattern\MessagePatternConverter.cs">
+      <Link>Layout\Pattern\MessagePatternConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Layout\Pattern\MethodLocationPatternConverter.cs">
+      <Link>Layout\Pattern\MethodLocationPatternConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Layout\Pattern\NamedPatternConverter.cs">
+      <Link>Layout\Pattern\NamedPatternConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Layout\Pattern\NdcPatternConverter.cs">
+      <Link>Layout\Pattern\NdcPatternConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Layout\Pattern\PatternLayoutConverter.cs">
+      <Link>Layout\Pattern\PatternLayoutConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Layout\Pattern\PropertyPatternConverter.cs">
+      <Link>Layout\Pattern\PropertyPatternConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Layout\Pattern\RelativeTimePatternConverter.cs">
+      <Link>Layout\Pattern\RelativeTimePatternConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Layout\Pattern\StackTraceDetailPatternConverter.cs">
+      <Link>Layout\Pattern\StackTraceDetailPatternConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Layout\Pattern\StackTracePatternConverter.cs">
+      <Link>Layout\Pattern\StackTracePatternConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Layout\Pattern\ThreadPatternConverter.cs">
+      <Link>Layout\Pattern\ThreadPatternConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Layout\Pattern\TypeNamePatternConverter.cs">
+      <Link>Layout\Pattern\TypeNamePatternConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Layout\Pattern\UserNamePatternConverter.cs">
+      <Link>Layout\Pattern\UserNamePatternConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Layout\Pattern\UtcDatePatternConverter.cs">
+      <Link>Layout\Pattern\UtcDatePatternConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Layout\RawLayoutConverter.cs">
+      <Link>Layout\RawLayoutConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Layout\RawPropertyLayout.cs">
+      <Link>Layout\RawPropertyLayout.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Layout\RawTimeStampLayout.cs">
+      <Link>Layout\RawTimeStampLayout.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Layout\RawUtcTimeStampLayout.cs">
+      <Link>Layout\RawUtcTimeStampLayout.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Layout\SimpleLayout.cs">
+      <Link>Layout\SimpleLayout.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Layout\XMLLayout.cs">
+      <Link>Layout\XMLLayout.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Layout\XMLLayoutBase.cs">
+      <Link>Layout\XMLLayoutBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Layout\XmlLayoutSchemaLog4j.cs">
+      <Link>Layout\XmlLayoutSchemaLog4j.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\LogicalThreadContext.cs">
+      <Link>LogicalThreadContext.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\LogManager.cs">
+      <Link>LogManager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\MDC.cs">
+      <Link>MDC.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\NDC.cs">
+      <Link>NDC.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\ObjectRenderer\DefaultRenderer.cs">
+      <Link>ObjectRenderer\DefaultRenderer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\ObjectRenderer\IObjectRenderer.cs">
+      <Link>ObjectRenderer\IObjectRenderer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\ObjectRenderer\RendererMap.cs">
+      <Link>ObjectRenderer\RendererMap.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Plugin\IPlugin.cs">
+      <Link>Plugin\IPlugin.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Plugin\IPluginFactory.cs">
+      <Link>Plugin\IPluginFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Plugin\PluginCollection.cs">
+      <Link>Plugin\PluginCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Plugin\PluginMap.cs">
+      <Link>Plugin\PluginMap.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Plugin\PluginSkeleton.cs">
+      <Link>Plugin\PluginSkeleton.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Plugin\RemoteLoggingServerPlugin.cs">
+      <Link>Plugin\RemoteLoggingServerPlugin.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Repository\ConfigurationChangedEventArgs.cs">
+      <Link>Repository\ConfigurationChangedEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Repository\Hierarchy\DefaultLoggerFactory.cs">
+      <Link>Repository\Hierarchy\DefaultLoggerFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Repository\Hierarchy\Hierarchy.cs">
+      <Link>Repository\Hierarchy\Hierarchy.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Repository\Hierarchy\ILoggerFactory.cs">
+      <Link>Repository\Hierarchy\ILoggerFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Repository\Hierarchy\Logger.cs">
+      <Link>Repository\Hierarchy\Logger.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Repository\Hierarchy\LoggerKey.cs">
+      <Link>Repository\Hierarchy\LoggerKey.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Repository\Hierarchy\ProvisionNode.cs">
+      <Link>Repository\Hierarchy\ProvisionNode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Repository\Hierarchy\RootLogger.cs">
+      <Link>Repository\Hierarchy\RootLogger.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Repository\Hierarchy\XmlHierarchyConfigurator.cs">
+      <Link>Repository\Hierarchy\XmlHierarchyConfigurator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Repository\IBasicRepositoryConfigurator.cs">
+      <Link>Repository\IBasicRepositoryConfigurator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Repository\ILoggerRepository.cs">
+      <Link>Repository\ILoggerRepository.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Repository\IXmlRepositoryConfigurator.cs">
+      <Link>Repository\IXmlRepositoryConfigurator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Repository\LoggerRepositorySkeleton.cs">
+      <Link>Repository\LoggerRepositorySkeleton.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\ThreadContext.cs">
+      <Link>ThreadContext.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\AppenderAttachedImpl.cs">
+      <Link>Util\AppenderAttachedImpl.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\CompositeProperties.cs">
+      <Link>Util\CompositeProperties.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\ContextPropertiesBase.cs">
+      <Link>Util\ContextPropertiesBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\ConverterInfo.cs">
+      <Link>Util\ConverterInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\CountingQuietTextWriter.cs">
+      <Link>Util\CountingQuietTextWriter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\CyclicBuffer.cs">
+      <Link>Util\CyclicBuffer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\EmptyCollection.cs">
+      <Link>Util\EmptyCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\EmptyDictionary.cs">
+      <Link>Util\EmptyDictionary.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\FormattingInfo.cs">
+      <Link>Util\FormattingInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\GlobalContextProperties.cs">
+      <Link>Util\GlobalContextProperties.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\ILogExtensions.cs">
+      <Link>Util\ILogExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\LevelMapping.cs">
+      <Link>Util\LevelMapping.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\LevelMappingEntry.cs">
+      <Link>Util\LevelMappingEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\LogicalThreadContextProperties.cs">
+      <Link>Util\LogicalThreadContextProperties.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\LogLog.cs">
+      <Link>Util\LogLog.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\NativeError.cs">
+      <Link>Util\NativeError.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\NullDictionaryEnumerator.cs">
+      <Link>Util\NullDictionaryEnumerator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\NullEnumerator.cs">
+      <Link>Util\NullEnumerator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\NullSecurityContext.cs">
+      <Link>Util\NullSecurityContext.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\OnlyOnceErrorHandler.cs">
+      <Link>Util\OnlyOnceErrorHandler.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\OptionConverter.cs">
+      <Link>Util\OptionConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\PatternConverter.cs">
+      <Link>Util\PatternConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\PatternParser.cs">
+      <Link>Util\PatternParser.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\PatternString.cs">
+      <Link>Util\PatternString.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\PatternStringConverters\AppDomainPatternConverter.cs">
+      <Link>Util\PatternStringConverters\AppDomainPatternConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\PatternStringConverters\DatePatternConverter.cs">
+      <Link>Util\PatternStringConverters\DatePatternConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\PatternStringConverters\EnvironmentFolderPathPatternConverter.cs">
+      <Link>Util\PatternStringConverters\EnvironmentFolderPathPatternConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\PatternStringConverters\EnvironmentPatternConverter.cs">
+      <Link>Util\PatternStringConverters\EnvironmentPatternConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\PatternStringConverters\IdentityPatternConverter.cs">
+      <Link>Util\PatternStringConverters\IdentityPatternConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\PatternStringConverters\LiteralPatternConverter.cs">
+      <Link>Util\PatternStringConverters\LiteralPatternConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\PatternStringConverters\NewLinePatternConverter.cs">
+      <Link>Util\PatternStringConverters\NewLinePatternConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\PatternStringConverters\ProcessIdPatternConverter.cs">
+      <Link>Util\PatternStringConverters\ProcessIdPatternConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\PatternStringConverters\PropertyPatternConverter.cs">
+      <Link>Util\PatternStringConverters\PropertyPatternConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\PatternStringConverters\RandomStringPatternConverter.cs">
+      <Link>Util\PatternStringConverters\RandomStringPatternConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\PatternStringConverters\UserNamePatternConverter.cs">
+      <Link>Util\PatternStringConverters\UserNamePatternConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\PatternStringConverters\UtcDatePatternConverter.cs">
+      <Link>Util\PatternStringConverters\UtcDatePatternConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\PropertiesDictionary.cs">
+      <Link>Util\PropertiesDictionary.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\PropertyEntry.cs">
+      <Link>Util\PropertyEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\ProtectCloseTextWriter.cs">
+      <Link>Util\ProtectCloseTextWriter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\QuietTextWriter.cs">
+      <Link>Util\QuietTextWriter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\ReaderWriterLock.cs">
+      <Link>Util\ReaderWriterLock.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\ReadOnlyPropertiesDictionary.cs">
+      <Link>Util\ReadOnlyPropertiesDictionary.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\ReusableStringWriter.cs">
+      <Link>Util\ReusableStringWriter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\SystemInfo.cs">
+      <Link>Util\SystemInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\SystemStringFormat.cs">
+      <Link>Util\SystemStringFormat.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\TextWriterAdapter.cs">
+      <Link>Util\TextWriterAdapter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\ThreadContextProperties.cs">
+      <Link>Util\ThreadContextProperties.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\ThreadContextStack.cs">
+      <Link>Util\ThreadContextStack.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\ThreadContextStacks.cs">
+      <Link>Util\ThreadContextStacks.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\Transform.cs">
+      <Link>Util\Transform.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\TypeConverters\BooleanConverter.cs">
+      <Link>Util\TypeConverters\BooleanConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\TypeConverters\ConversionNotSupportedException.cs">
+      <Link>Util\TypeConverters\ConversionNotSupportedException.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\TypeConverters\ConverterRegistry.cs">
+      <Link>Util\TypeConverters\ConverterRegistry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\TypeConverters\EncodingConverter.cs">
+      <Link>Util\TypeConverters\EncodingConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\TypeConverters\IConvertFrom.cs">
+      <Link>Util\TypeConverters\IConvertFrom.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\TypeConverters\IConvertTo.cs">
+      <Link>Util\TypeConverters\IConvertTo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\TypeConverters\IPAddressConverter.cs">
+      <Link>Util\TypeConverters\IPAddressConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\TypeConverters\PatternLayoutConverter.cs">
+      <Link>Util\TypeConverters\PatternLayoutConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\TypeConverters\PatternStringConverter.cs">
+      <Link>Util\TypeConverters\PatternStringConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\TypeConverters\TypeConverter.cs">
+      <Link>Util\TypeConverters\TypeConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\TypeConverters\TypeConverterAttribute.cs">
+      <Link>Util\TypeConverters\TypeConverterAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\..\log4net.vs2010.client\Util\WindowsSecurityContext.cs">
+      <Link>Util\WindowsSecurityContext.cs</Link>
+    </Compile>
+    <Compile Include="..\log4net.vs2010.client.configuration\Config\AliasDomainAttribute.cs">
+      <Link>Config\AliasDomainAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\log4net.vs2010.client.configuration\Config\AliasRepositoryAttribute.cs">
+      <Link>Config\AliasRepositoryAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\log4net.vs2010.client.configuration\Config\BasicConfigurator.cs">
+      <Link>Config\BasicConfigurator.cs</Link>
+    </Compile>
+    <Compile Include="..\log4net.vs2010.client.configuration\Config\ConfiguratorAttribute.cs">
+      <Link>Config\ConfiguratorAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\log4net.vs2010.client.configuration\Config\DomainAttribute.cs">
+      <Link>Config\DomainAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\log4net.vs2010.client.configuration\Config\DOMConfigurator.cs">
+      <Link>Config\DOMConfigurator.cs</Link>
+    </Compile>
+    <Compile Include="..\log4net.vs2010.client.configuration\Config\DOMConfiguratorAttribute.cs">
+      <Link>Config\DOMConfiguratorAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\log4net.vs2010.client.configuration\Config\Log4NetConfigurationSectionHandler.cs">
+      <Link>Config\Log4NetConfigurationSectionHandler.cs</Link>
+    </Compile>
+    <Compile Include="..\log4net.vs2010.client.configuration\Config\PluginAttribute.cs">
+      <Link>Config\PluginAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\log4net.vs2010.client.configuration\Config\RepositoryAttribute.cs">
+      <Link>Config\RepositoryAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\log4net.vs2010.client.configuration\Config\SecurityContextProviderAttribute.cs">
+      <Link>Config\SecurityContextProviderAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\log4net.vs2010.client.configuration\Config\XmlConfigurator.cs">
+      <Link>Config\XmlConfigurator.cs</Link>
+    </Compile>
+    <Compile Include="..\log4net.vs2010.client.configuration\Config\XmlConfiguratorAttribute.cs">
+      <Link>Config\XmlConfiguratorAttribute.cs</Link>
+    </Compile>
+    <Compile Include="Appender\AspNetTraceAppender.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Layout\Pattern\AspNetCachePatternConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Layout\Pattern\AspNetContextPatternConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Layout\Pattern\AspNetPatternConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Layout\Pattern\AspNetRequestPatternConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Layout\Pattern\AspNetSessionPatternConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties ProjectLinkReference="813ad8b6-c7af-4ab7-b686-fe4af14fb8fc" ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;\.WP.cs;\.MA.cs;\.MT.cs;\.WF.cs;\.WPF.cs;\.ASPNET.cs;\.SLRIA.cs;\.MM.cs;\.Mono.cs;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$;\\?\.WP(\\.*)?$;\\?\.MA(\\.*)?$;\\?\.MT(\\.*)?$;\\?\.WF(\\.*)?$;\\?\.WPF(\\.*)?$;\\?\.ASPNET(\\.*)?$;\\?\.SLRIA(\\.*)?$;\\?\.MM(\\.*)?$;\\?\.Mono(\\.*)?$" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
